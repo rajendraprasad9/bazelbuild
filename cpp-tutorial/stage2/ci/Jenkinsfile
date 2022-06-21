@@ -1,6 +1,7 @@
 node {
    stage('checkout'){
    echo "git checkout stage"
+      git branch: 'main', credentialsId: 'rajendraprasad_github', poll: false, url: 'https://github.com/rajendraprasad9/bazelbuild.git'
    }
                 
    stage('Bazel Build') {
