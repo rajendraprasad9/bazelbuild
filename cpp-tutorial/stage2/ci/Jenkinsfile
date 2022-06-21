@@ -6,5 +6,10 @@ node {
                 
    stage('Bazel Build') {
    echo "From Bazel Build Stage"
+      sh '''
+      ls
+      pwd
+      bazel build //main:hello-world
+      '''
     }
 }
