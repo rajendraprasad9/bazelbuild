@@ -1,0 +1,16 @@
+node {
+   stage('checkout'){
+   echo "git checkout stage"
+      git branch: 'main', credentialsId: 'rajendraprasad_github', url: 'https://github.com/rajendraprasad9/bazelbuild.git'
+   }
+                
+   stage('Bazel Build') {
+   echo "From Bazel Build Stage"
+      sh '''
+      pwd
+      ls
+      cd cpp-tutorial/stage3
+      bazel build //main:hello-world
+      '''
+    }
+}
