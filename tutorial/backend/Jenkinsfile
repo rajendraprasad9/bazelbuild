@@ -8,7 +8,7 @@ node {
    echo "From Bazel Build Stage"
       sh '''
      cd rules/shell_command
-     bazel build rules
+     bazel build //shell_command:rules
       pwd
       ls -l
       '''
