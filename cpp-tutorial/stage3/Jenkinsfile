@@ -16,7 +16,6 @@ node {
     stage('Archieve Artifact')
       {
          echo "Archieve the Artifact"
-         cd cpp-tutorial/stage3
-        archiveArtifacts artifacts: 'main', followSymlinks: false         
+        archiveArtifacts artifacts: 'stage3/main', followSymlinks: false         
       }
     }
