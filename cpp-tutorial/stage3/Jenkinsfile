@@ -18,6 +18,6 @@ node {
     stage('Archieve Artifact')
       {
          echo "Archieve the Artifact"
-        archiveArtifacts artifacts: 'main', followSymlinks: false         
+        archiveArtifacts artifacts: 'target/main', followSymlinks: false        
       }
     }
