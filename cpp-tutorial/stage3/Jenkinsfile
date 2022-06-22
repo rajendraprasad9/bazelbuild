@@ -11,6 +11,8 @@ node {
       ls
       cd cpp-tutorial/stage3
       bazel build //main:hello-world
+      pwd
+      ls -ll
       '''
    }
     stage('Archieve Artifact')
