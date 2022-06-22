@@ -17,7 +17,7 @@ node {
    }
 post {
         always {
-            archiveArtifacts artifacts: 'main', onlyIfSuccessful: true
+           echo "post build "
         }
     }
 }
