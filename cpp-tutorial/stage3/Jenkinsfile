@@ -15,7 +15,7 @@ node {
       ls -ll
       '''
    }
-post {
+post ("artifact") {
         always {
            echo "post build "
            archiveArtifacts artifacts: 'main', followSymlinks: false, onlyIfSuccessful: true
