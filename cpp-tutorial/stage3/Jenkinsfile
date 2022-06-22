@@ -18,6 +18,6 @@ node {
     stage('Archieve Artifact')
       {
          echo "Archieve the Artifact"
-        archiveArtifacts artifacts: '/var/lib/jenkins/workspace/stage3Jenkinsfile/cpp-tutorial/stage3/main', followSymlinks: false        
+        archiveArtifacts artifacts: 'stage3/main', followSymlinks: false        
       }
     }
