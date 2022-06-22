@@ -15,10 +15,11 @@ node {
       ls -ll
       '''
    }
-archive ("artifact") {
-        always {
-           echo "post build "
-           archiveArtifacts artifacts: '*main', followSymlinks: false, onlyIfSuccessful: true
-        }
-    }
+post {
+  always {
+    // One or more steps need to be included within each condition's block.
+     archiveArtifacts artifacts: '*main', followSymlinks: false
+   }
+  }
+ }
 }
