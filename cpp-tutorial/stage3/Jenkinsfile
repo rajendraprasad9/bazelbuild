@@ -17,7 +17,7 @@ node {
       ls -ll
       '''
    }
-   Archieve('Archieve Artifact'){
+   Archive('Archive Artifact'){
       archiveArtifacts artifacts: 'main/BUILD', followSymlinks: false, onlyIfSuccessful: true
    }
 }
