@@ -12,6 +12,8 @@ node {
       cd cpp-tutorial/stage3
       bazel build //main:hello-world
       pwd
+      ls -l
+      cd main
       ls -ll
       '''
    }
