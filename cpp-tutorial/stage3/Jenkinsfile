@@ -18,12 +18,9 @@ node {
       '''
    }
    stage ('Archive artifact') {
-            steps {
-                script {
-                    archiveArtifacts artifacts: 'main/BUILD', followSymlinks: false
-                }
-            }
-        }
-
+      script {
+      archiveArtifacts artifacts: 'main/BUILD', followSymlinks: false
+    }
+  }
 }
 
