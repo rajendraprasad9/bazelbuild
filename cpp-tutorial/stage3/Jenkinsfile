@@ -1,5 +1,4 @@
 node {
-   stages {
    stage('checkout'){
    echo "git checkout stage"
       git branch: 'main', credentialsId: 'rajendraprasad_github', url: 'https://github.com/rajendraprasad9/bazelbuild.git'
@@ -16,10 +15,9 @@ node {
       ls -ll
       '''
    }
-
   stage('archieve') {
     steps {
-      // One or more steps need to be included within the steps block.
+      // Oupne or more steps need to be included within the steps block.
        archiveArtifacts artifacts: 'main', followSymlinks: false, onlyIfSuccessful: true
     }
   }
