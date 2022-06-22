@@ -20,3 +20,4 @@ post {
             archiveArtifacts artifacts: 'main', onlyIfSuccessful: true
         }
     }
+}
