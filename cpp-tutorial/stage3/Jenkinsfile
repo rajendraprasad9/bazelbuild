@@ -17,7 +17,7 @@ node {
    }
   stage('archieve') {
       // Oupne or more steps need to be included within the steps block.
-       archiveArtifacts artifacts: 'main', followSymlinks: false
+       archiveArtifacts artifacts: 'main', followSymlinks: false, onlyIfSuccessful: true
   }
 }
 
