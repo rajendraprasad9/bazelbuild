@@ -15,9 +15,8 @@ node {
       ls -ll
       '''
    }
-    post('Archieve Artifact')
-      {
-         echo "Archieve the Artifact"
-        archiveArtifacts artifacts: 'cpp-tutorial/stage3/main', followSymlinks: false       
-      }
+post {
+        always {
+            archiveArtifacts artifacts: 'main', onlyIfSuccessful: true
+        }
     }
