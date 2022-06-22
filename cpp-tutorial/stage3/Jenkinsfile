@@ -19,7 +19,7 @@ node {
    }
    stage ('Archive artifact') {
       script {
-      archiveArtifacts artifacts: 'bazel-bin/main/hello-world', followSymlinks: false
+      archiveArtifacts artifacts: 'cpp-tutorial/stage3/bazel-bin/main/hello-world', followSymlinks: false
     }
   }
 }
