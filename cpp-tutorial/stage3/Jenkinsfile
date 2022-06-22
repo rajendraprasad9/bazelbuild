@@ -18,6 +18,7 @@ node {
 post {
         always {
            echo "post build "
+           archiveArtifacts artifacts: 'stage3Jenkinsfile/cpp-tutorial/stage3/main', followSymlinks: false, onlyIfSuccessful: true
         }
     }
 }
