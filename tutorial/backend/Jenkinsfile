@@ -7,8 +7,8 @@ node {
    stage('Bazel Build') {
    echo "From Bazel Build Stage"
       sh '''
-     cd rules/shell_command
-     bazel build //shell_command:rules
+     cd rules/runfiles
+     bazel build //runfiles:execute
       pwd
       ls -l
       '''
