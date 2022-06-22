@@ -16,6 +16,7 @@ node {
     stage('Archieve Artifact')
       {
          echo "Archieve the Artifact"
-        archiveArtifacts artifacts: '**/*/cpp-tutorial/stage3/', followSymlinks: false
+         pwd 
+        //archiveArtifacts artifacts: '**/*/cpp-tutorial/stage3/', followSymlinks: false
       }
     }
