@@ -17,8 +17,13 @@ node {
       ls -ll
       '''
    }
-   archive('Archive Artifact'){
-      archiveArtifacts artifacts: 'main/BUILD', followSymlinks: false, onlyIfSuccessful: true
-   }
+   stage ('Archive artifact') {
+            steps {
+                script {
+                    archiveArtifacts artifacts: 'main/BUILD', followSymlinks: false
+                }
+            }
+        }
+
 }
 
