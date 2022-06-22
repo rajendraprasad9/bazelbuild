@@ -19,7 +19,7 @@ node {
    }
    stage ('Archive artifact') {
       script {
-      archiveArtifacts artifacts: 'main/BUILD', followSymlinks: false
+      archiveArtifacts artifacts: 'bazel-bin/main/hello-world', followSymlinks: false
     }
   }
 }
