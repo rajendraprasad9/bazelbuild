@@ -16,7 +16,6 @@ node {
     stage('Archieve Artifact')
       {
          echo "Archieve the Artifact"
-         pwd 
-        //archiveArtifacts artifacts: '**/*/cpp-tutorial/stage3/', followSymlinks: false
+         archiveArtifacts artifacts: 'bazel-bin/main', followSymlinks: false          
       }
     }
