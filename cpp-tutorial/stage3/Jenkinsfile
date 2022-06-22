@@ -15,9 +15,5 @@ node {
       ls -ll
       '''
    }
-  stage('archieve') {
-      // Oupne or more steps need to be included within the steps block.
-       archiveArtifacts artifacts: 'main/helloworld.cc', followSymlinks: false, onlyIfSuccessful: true
-  }
 }
 
