@@ -10,7 +10,6 @@ node {
       pwd
       ls
       cd /tutorial/backend/
-      bazel build //backend:webapp
       pwd
       ls -l
       '''
