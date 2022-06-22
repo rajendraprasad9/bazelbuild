@@ -7,9 +7,8 @@ node {
    stage('Bazel Build') {
    echo "From Bazel Build Stage"
       sh '''
-      ll
-      chmod 777 /tutorial/backend
-      cd /tutorial/backend/
+     cd rules/shell_command
+     bazel build rules.bzl
       pwd
       ls -l
       '''
