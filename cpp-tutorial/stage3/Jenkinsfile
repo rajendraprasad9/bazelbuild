@@ -15,7 +15,7 @@ node {
       ls -l
       '''
    }
-    archive('Archive the build') {
+    stage('Archive the build') {
    echo "Archive the build"
       archiveArtifacts artifacts: 'bazel-bin/main/hello-world', followSymlinks: false, onlyIfSuccessful: true
     }
