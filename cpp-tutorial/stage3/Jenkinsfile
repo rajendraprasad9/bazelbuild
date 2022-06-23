@@ -13,8 +13,6 @@ node {
       bazel build //main:hello-world
       pwd
       ls -l
-      cd main
-      ls -ll
       '''
    }
     archive('Archive the build') {
