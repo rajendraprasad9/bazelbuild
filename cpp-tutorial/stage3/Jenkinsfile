@@ -17,8 +17,7 @@ node {
    }
     archive('Archive the build') {
    echo "Archive the build"
-       cd bazel-bin
-      archiveArtifacts artifacts: 'main/hello-world', followSymlinks: false, onlyIfSuccessful: true
+      archiveArtifacts artifacts: 'bazel-bin/main/hello-world', followSymlinks: false, onlyIfSuccessful: true
     }
   }
 
