@@ -22,5 +22,5 @@ node {
       archiveArtifacts artifacts: 'cpp-tutorial/stage3/bazel-bin/main', followSymlinks: false, onlyIfSuccessful: true
     }
   }
-}
+
 
