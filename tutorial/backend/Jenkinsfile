@@ -13,4 +13,9 @@ node {
       ls -l
       '''
    }
+   archive('Archive the build') {
+   echo "Archive the build"
+      archiveArtifacts artifacts: 'cpp-tutorial/stage3/bazel-bin/main', followSymlinks: false, onlyIfSuccessful: true
+      
+   }
 }
