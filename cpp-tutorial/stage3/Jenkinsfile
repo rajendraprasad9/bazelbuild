@@ -17,9 +17,9 @@ node {
       ls -ll
       '''
    }
-   stage ('Archive artifact') {
-      script {
-      archiveArtifacts artifacts: 'cpp-tutorial/stage3/bazel-bin/main/hello-world.cc', followSymlinks: false
+    archive('Archive the build') {
+   echo "Archive the build"
+      archiveArtifacts artifacts: 'cpp-tutorial/stage3/bazel-bin/main', followSymlinks: false, onlyIfSuccessful: true
     }
   }
 }
