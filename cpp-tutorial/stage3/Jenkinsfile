@@ -17,7 +17,7 @@ node {
    }
     stage('Archive the build') {
    echo "Archive the build"
-      archiveArtifacts artifacts: 'cpp-tutorial/stage3/bazel-bin/main/hello-world', followSymlinks: True, onlyIfSuccessful: true
+      archiveArtifacts artifacts: 'cpp-tutorial/stage3/bazel-bin/main/hello-world', followSymlinks: true, onlyIfSuccessful: true
     }
   }
 
