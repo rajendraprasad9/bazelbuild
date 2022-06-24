@@ -1,0 +1,22 @@
+node {
+   stage('checkout'){
+   echo "git checkout stage"
+      git branch: 'main', credentialsId: 'rajendraprasad_github', url: 'https://github.com/rajendraprasad9/bazelbuild.git'
+   }
+                
+   stage('Bazel Build') {
+   echo "From Bazel Build Stage"
+      sh '''
+      pwd
+      ls
+      cd java-maven
+      bazel build :java-maven
+      pwd
+      ls -l
+      '''
+   }
+    stage('Archive the build') {
+   echo "Archive the build"
+      archiveArtifacts artifacts: '', followSymlinks: true, onlyIfSuccessful: true
+    }
+  }
